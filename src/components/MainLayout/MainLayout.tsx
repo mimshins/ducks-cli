@@ -1,10 +1,10 @@
 "use client";
 
 import { FiraCodeFont, InterFont } from "@/configs";
-import { HelixClient } from "@dot-helix/ui";
+import { Flex, HelixClient } from "@dot-helix/ui";
 import * as React from "react";
 import classes from "./MainLayout.module.css";
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 import { ColorSchemeStore } from "./store";
 
 export type Props = {
@@ -24,12 +24,20 @@ const MainLayout = (props: Props) => {
         monospaceFontFamily: FiraCodeFont.style.fontFamily,
       }}
     >
-      <Header
-        className={classes.header}
-        colorScheme={colorScheme}
-      />
-      <main className={classes.main}>{children}</main>
-      <footer className={classes.footer}></footer>
+      <Flex.Container
+        className={classes.root}
+        direction="column"
+      >
+        <Header
+          className={classes.header}
+          colorScheme={colorScheme}
+        />
+        <main className={classes.main}>{children}</main>
+        <Footer
+          className={classes.footer}
+          colorScheme={colorScheme}
+        />
+      </Flex.Container>
     </HelixClient>
   );
 };
