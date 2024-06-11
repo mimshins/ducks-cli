@@ -29,6 +29,7 @@
   },
   "scripts": {
     "dev": "next dev",
+    "lint": "eslint \"**/*.{ts,tsx}\" --config .eslintrc && tsc --project tsconfig.json",
     "next-app:preview": "next start",
     "next-app:build": "",
     "build:pre": "rimraf dist",
@@ -36,8 +37,7 @@
     "build:app": "",
     "build:cli": "npm-run-all build:cli:compile build:cli:make-publishable",
     "build:cli:compile": "ncc build bin/index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
-    "build:cli:make-publishable": "tsx scripts/make-publishable.ts",
-    "lint": "eslint \"**/*.{ts,tsx}\" --config .eslintrc"
+    "build:cli:make-publishable": "tsx scripts/make-publishable.ts"
   },
   "dependencies": {
     "@dot-helix/ui": "1.0.0-canary.4",

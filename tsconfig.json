@@ -31,6 +31,6 @@
       "@public/*": ["./public/*"]
     }
   },
-  "include": ["src", "scripts", "bin", ".next/types/**/*.ts"],
+  "include": ["src", "scripts", "bin", ".next/types/**/*.ts", "next-env.d.ts"],
   "exclude": ["node_modules", "dist"]
 }
