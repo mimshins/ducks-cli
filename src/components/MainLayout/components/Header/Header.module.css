@@ -1,0 +1,45 @@
+.root {
+  width: 100%;
+
+  isolation: isolate;
+  backdrop-filter: saturate(180%) blur(4px);
+
+  z-index: var(--z-1);
+
+  box-shadow:
+    var(--shadow-sm),
+    inset 0 -1px 0 0 var(--color-neutral-border-normal);
+}
+
+[data-name="VariableGenerator"][data-variant="dark"] .root {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+[data-name="VariableGenerator"][data-variant="light"] .root {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.container > [data-slot*="Flex"] {
+  height: 4rem;
+}
+
+/* down xs */
+@media (max-width: 519.95px) {
+  .container {
+    padding: 0 !important;
+  }
+
+  .container > [data-slot*="Flex"] {
+    height: auto;
+
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+
+  .nav + [data-slot*="Flex"] {
+    box-shadow: inset 0 1px 0 0 var(--color-neutral-border-normal);
+    padding-top: var(--space-md);
+    padding-right: var(--space-xlg);
+    padding-left: var(--space-xlg);
+  }
+}

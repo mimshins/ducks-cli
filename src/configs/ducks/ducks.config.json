@@ -1,0 +1,8 @@
+{
+  "name": "My Ducks App",
+  "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod dolorum repellendus temporibus ipsam, saepe consequuntur fugit mollitia sint.",
+  "socials": {
+    "twitter": "https://twitter.com/mimshins",
+    "github": "https://github.com/mimshins/react-design-tokens"
+  }
+}
