@@ -1,0 +1,14 @@
+:where(a):not([data-slot*="Button"]) {
+  text-decoration: none;
+
+  color: var(--color-secondary-origin);
+}
+
+:where(a):not([data-slot*="Button"]):hover,
+:where(a):not([data-slot*="Button"]):visited:hover {
+  color: var(--color-secondary-hover);
+}
+
+:where(a):not([data-slot*="Button"]):visited {
+  color: var(--color-secondary-active);
+}
