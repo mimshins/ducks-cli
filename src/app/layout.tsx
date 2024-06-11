@@ -1,6 +1,8 @@
 import { MainLayout } from "@/components";
 import type * as React from "react";
 
+import "./global-styles.css";
+
 type Props = {
   children: React.ReactNode;
 };
