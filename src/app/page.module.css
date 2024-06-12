@@ -1,0 +1,28 @@
+.content {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+
+  min-width: 0;
+}
+
+.toc {
+  --toc-top-offset: calc(var(--app-header-height) + var(--app-main-top-gap));
+
+  width: 16rem;
+  height: calc(100vh - var(--toc-top-offset));
+
+  position: sticky;
+  top: var(--toc-top-offset);
+
+  z-index: var(--z-0);
+
+  flex-shrink: 0;
+}
+
+/* down xlg */
+@media (max-width: 1365.95px) {
+  .toc {
+    display: none;
+  }
+}

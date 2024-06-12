@@ -1,0 +1,21 @@
+.root {
+  isolation: isolate;
+
+  padding-top: var(--space-xlg);
+  padding-bottom: var(--space-xlg);
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.nav__item.nav__item--leaf {
+  max-width: fit-content;
+}
+
+.nav__item.nav__item--leaf:hover {
+  color: var(--color-primary-hover);
+}
+
+.nav__item.nav__item--group {
+  padding-inline-start: var(--space-xlg);
+}
