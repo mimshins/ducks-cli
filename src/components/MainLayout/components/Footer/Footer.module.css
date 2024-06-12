@@ -1,12 +1,5 @@
-.root {
-  width: 100%;
-
-  padding-top: var(--space-xlg);
-  padding-bottom: var(--space-xlg);
-
-  background-color: var(--color-neutral-surface-quaternary);
-
-  box-shadow: inset 0 1px 0 0 var(--color-neutral-border-normal);
+.root.root {
+  border-radius: 0;
 }
 
 .root img[alt="Logo"] {
