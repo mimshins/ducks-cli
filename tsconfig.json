@@ -28,9 +28,17 @@
     "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./src/*"],
-      "@public/*": ["./public/*"]
+      "@public/*": ["./public/*"],
+      "@shared-types": ["./shared-types/index.ts"]
     }
   },
-  "include": ["src", "scripts", "bin", ".next/types/**/*.ts", "next-env.d.ts"],
+  "include": [
+    "src",
+    "scripts",
+    "bin",
+    "shared-types",
+    ".next/types/**/*.ts",
+    "next-env.d.ts"
+  ],
   "exclude": ["node_modules", "dist"]
 }
