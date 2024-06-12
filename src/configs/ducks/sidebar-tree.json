@@ -1,0 +1,38 @@
+{
+  "sidebarTree": [
+    {
+      "title": "Getting Started",
+      "children": [
+        {
+          "title": "Installation",
+          "routePath": "/getting-started/installation"
+        },
+        {
+          "title": "Project Structure",
+          "routePath": "/getting-started/project-structure"
+        }
+      ]
+    },
+    {
+      "title": "Components",
+      "children": [
+        {
+          "title": "Badge",
+          "routePath": "/components/badge"
+        },
+        {
+          "title": "Breadcrumb",
+          "routePath": "/components/breadcrumb"
+        },
+        {
+          "title": "Button",
+          "routePath": "/components/button"
+        }
+      ]
+    },
+    {
+      "title": "Server-side Rendering",
+      "routePath": "/server-side-rendering"
+    }
+  ]
+}

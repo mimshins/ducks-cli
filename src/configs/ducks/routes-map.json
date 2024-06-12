@@ -1,0 +1,5 @@
+{
+  "routesMap": {
+    "/getting-started/installation": "path/to/markdown.md"
+  }
+}
