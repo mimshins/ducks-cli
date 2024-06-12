@@ -19,3 +19,11 @@ export type SidebarTreeNode =
     };
 
 export type SidebarTree = SidebarTreeNode[];
+
+export type TOCTreeNode = {
+  title: string;
+  reference: string;
+  children?: TOCTreeNode[];
+};
+
+export type TOCTree = TOCTreeNode[];
