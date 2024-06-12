@@ -1,12 +1,8 @@
 import { SocialType, socialTitleMap } from "@/constants";
 import type { Social } from "@/types";
-import appConfigJson from "./ducks.config.json";
-
-type Config = {
-  name: string;
-  description: string;
-  socials: Social[];
-};
+import type { DucksConfig } from "@shared-types";
+import appConfigJson from "./app.config.json";
+import type { AppConfig } from "./types";
 
 const createSocials = (socialUrlMap: Record<string, string> = {}) => {
   const socials: Social[] = [];
@@ -30,10 +26,12 @@ const createSocials = (socialUrlMap: Record<string, string> = {}) => {
   return socials;
 };
 
-const config: Config = {
-  name: appConfigJson.name,
-  description: appConfigJson.description,
-  socials: createSocials(appConfigJson.socials),
+const { name, description, socials } = appConfigJson as DucksConfig;
+
+const appConfig: AppConfig = {
+  name,
+  description,
+  socials: createSocials(socials),
 };
 
-export default config;
+export default appConfig;
