@@ -1,10 +1,13 @@
 "use client";
 
 import { FiraCodeFont, InterFont } from "@/configs";
-import { Flex, HelixClient } from "@dot-helix/ui";
+import { NavMenuOpenStore } from "@/store";
+import { clss, useScrollGuard } from "@/utils";
+import { Flex, HelixClient, Layout } from "@dot-helix/ui";
 import * as React from "react";
 import classes from "./MainLayout.module.css";
-import { Footer, Header } from "./components";
+import { Dimmer, Footer, Header } from "./components";
+import Sidebar from "./components/Sidebar";
 import { ColorSchemeStore } from "./store";
 
 export type Props = {
@@ -16,6 +19,24 @@ const MainLayout = (props: Props) => {
 
   const colorScheme = ColorSchemeStore.useValue();
 
+  const navMenuOpen = NavMenuOpenStore.useValue();
+  const setNavMenuOpen = NavMenuOpenStore.useUpdateValue();
+
+  const { enablePageScroll, disablePageScroll } = useScrollGuard();
+
+  React.useEffect(() => {
+    const onOpenChange = (open: boolean) => {
+      if (open) disablePageScroll();
+      else enablePageScroll();
+    };
+
+    return NavMenuOpenStore.subscribe(onOpenChange);
+  }, [enablePageScroll, disablePageScroll]);
+
+  const handleDimmerClick = () => {
+    setNavMenuOpen(false);
+  };
+
   return (
     <HelixClient
       colorScheme={colorScheme}
@@ -24,6 +45,10 @@ const MainLayout = (props: Props) => {
         monospaceFontFamily: FiraCodeFont.style.fontFamily,
       }}
     >
+      <Dimmer
+        visible={navMenuOpen}
+        onClick={handleDimmerClick}
+      />
       <Flex.Container
         className={classes.root}
         direction="column"
@@ -32,10 +57,21 @@ const MainLayout = (props: Props) => {
           className={classes.header}
           colorScheme={colorScheme}
         />
-        <main className={classes.main}>{children}</main>
+        <main className={classes.main}>
+          <Layout.Container>
+            <Flex.Container gap="xlg">
+              <Sidebar
+                className={clss(classes.sidebar, {
+                  [classes["sidebar--open"]!]: navMenuOpen,
+                })}
+              />
+              <section className={classes.content}>{children}</section>
+            </Flex.Container>
+          </Layout.Container>
+        </main>
         <Footer
-          className={classes.footer}
           colorScheme={colorScheme}
+          className={classes.footer}
         />
       </Flex.Container>
     </HelixClient>
