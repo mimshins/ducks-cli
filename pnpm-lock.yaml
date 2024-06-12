@@ -17,6 +17,9 @@ importers:
       '@utilityjs/use-media-query':
         specifier: ^1.0.1
         version: 1.0.1(react@18.3.1)
+      '@utilityjs/use-scroll-guard':
+        specifier: ^1.0.0
+        version: 1.0.0(react@18.3.1)
       next:
         specifier: ^14.2.3
         version: 14.2.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
