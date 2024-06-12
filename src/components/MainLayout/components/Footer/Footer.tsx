@@ -1,6 +1,6 @@
 import { DucksAppConfig } from "@/configs";
 import { clss } from "@/utils";
-import { Flex, FlexLayout, Text, type ColorScheme } from "@dot-helix/ui";
+import { Flex, Layout, Surface, Text, type ColorScheme } from "@dot-helix/ui";
 import LogoDarkMode from "@public/logo.darkmode.svg";
 import LogoLightMode from "@public/logo.lightmode.svg";
 import type { StaticImport } from "next/dist/shared/lib/get-img-props";
@@ -24,8 +24,12 @@ const Footer = (props: Props) => {
   }[colorScheme];
 
   return (
-    <footer className={clss(className, classes.root)}>
-      <FlexLayout.Container>
+    <Surface
+      level="mid"
+      as="footer"
+      className={clss(className, classes.root)}
+    >
+      <Layout.Container>
         <Flex.Container
           gap="md"
           direction="column"
@@ -80,8 +84,8 @@ const Footer = (props: Props) => {
             </Flex.Item>
           </Flex.Container>
         </Flex.Container>
-      </FlexLayout.Container>
-    </footer>
+      </Layout.Container>
+    </Surface>
   );
 };
 

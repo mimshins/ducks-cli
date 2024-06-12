@@ -40,7 +40,7 @@
     "build:cli:make-publishable": "tsx scripts/make-publishable.ts"
   },
   "dependencies": {
-    "@dot-helix/ui": "1.0.0-canary.4",
+    "@dot-helix/ui": "1.0.0-canary.5",
     "@mdi/js": "^7.4.47",
     "@utilityjs/use-media-query": "^1.0.1",
     "next": "^14.2.3",

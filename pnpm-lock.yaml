@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@dot-helix/ui':
-        specifier: 1.0.0-canary.4
-        version: 1.0.0-canary.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 1.0.0-canary.5
+        version: 1.0.0-canary.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@mdi/js':
         specifier: ^7.4.47
         version: 7.4.47
@@ -141,8 +141,8 @@ packages:
     peerDependencies:
       commander: ~12.1.0
 
-  '@dot-helix/ui@1.0.0-canary.4':
-    resolution: {integrity: sha512-DT5GqSOnq4sfagIk3PX+ForiGtcUac4Lvx8PAcx8lYHAUx/AUlbpNB1yq+HiojVqEkAX9GuYb5KvYxXtylfZNg==}
+  '@dot-helix/ui@1.0.0-canary.5':
+    resolution: {integrity: sha512-FFkzz11bDXhoj1oFaeOYfwzzh/VTSVoUeW5qwFZtaL9SELVcnxO2MWCKQEGY6VZYuKAe1QG+YTapQCnClQZIgQ==}
     engines: {node: '>=20'}
     peerDependencies:
       react: '>=17'
@@ -2135,7 +2135,7 @@ snapshots:
     dependencies:
       commander: 12.1.0
 
-  '@dot-helix/ui@1.0.0-canary.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@dot-helix/ui@1.0.0-canary.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@styleless-ui/react': 1.0.0-rc.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       classnames: 2.5.1

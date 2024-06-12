@@ -5,9 +5,9 @@ import type { Social } from "@/types";
 import { clss, useMediaQuery } from "@/utils";
 import {
   Flex,
-  FlexLayout,
   Icon,
   IconButton,
+  Layout,
   Separator,
   Text,
   ToggleGroup,
@@ -112,7 +112,7 @@ const Header = (props: Props) => {
       {...otherProps}
       className={clss(className, classes.root)}
     >
-      <FlexLayout.Container className={classes.container}>
+      <Layout.Container className={classes.container}>
         <Flex.Container
           alignItems="center"
           gap="md"
@@ -162,7 +162,7 @@ const Header = (props: Props) => {
             </Flex.Container>
           </Flex.Item>
         </Flex.Container>
-      </FlexLayout.Container>
+      </Layout.Container>
     </header>
   );
 };
