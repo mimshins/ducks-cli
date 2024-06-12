@@ -4,8 +4,6 @@
   isolation: isolate;
   backdrop-filter: saturate(180%) blur(4px);
 
-  z-index: var(--z-1);
-
   box-shadow:
     var(--shadow-sm),
     inset 0 -1px 0 0 var(--color-neutral-border-normal);
@@ -24,18 +22,16 @@
 }
 
 .container > [data-slot*="Flex"] {
-  height: 4rem;
+  height: var(--app-header-height);
 }
 
-/* down xs */
-@media (max-width: 519.95px) {
+/* down sm */
+@media (max-width: 767.95px) {
   .container {
     padding: 0 !important;
   }
 
   .container > [data-slot*="Flex"] {
-    height: 6.25rem;
-
     padding-top: var(--space-md);
     padding-bottom: var(--space-md);
   }

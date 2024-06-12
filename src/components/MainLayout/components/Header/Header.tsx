@@ -36,8 +36,8 @@ const Header = (props: Props) => {
   const setColorScheme = ColorSchemeStore.useUpdateValue();
   const setNavMenuOpen = NavMenuOpenStore.useUpdateValue();
 
-  const [belowXS] = useMediaQuery(
-    BreakpointUtils.down("xs").replace("@media ", ""),
+  const [belowSM] = useMediaQuery(
+    BreakpointUtils.down("sm", { excludeAtMedia: true }),
   );
 
   const logo = {
@@ -52,7 +52,7 @@ const Header = (props: Props) => {
   };
 
   const renderMenuBtn = () => {
-    if (!belowXS) return null;
+    if (!belowSM) return null;
 
     return (
       <IconButton
@@ -116,7 +116,7 @@ const Header = (props: Props) => {
         <Flex.Container
           alignItems="center"
           gap="md"
-          direction={{ xxs: "column", xs: "row" }}
+          direction={{ xxs: "column", sm: "row" }}
         >
           <nav
             className={classes.nav}
@@ -138,12 +138,12 @@ const Header = (props: Props) => {
             </Flex.Container>
           </nav>
           <Flex.Item
-            autoMarginInlineStart={{ xxs: false, xs: true }}
-            alignSelf={{ xxs: "stretch", xs: "auto" }}
+            autoMarginInlineStart={{ xxs: false, sm: true }}
+            alignSelf={{ xxs: "stretch", sm: "auto" }}
           >
             <Flex.Container alignItems="center">
               {renderMenuBtn()}
-              <Flex.Item autoMarginInlineStart={{ xxs: true, xs: false }}>
+              <Flex.Item autoMarginInlineStart={{ xxs: true, sm: false }}>
                 <Flex.Container alignItems="center">
                   {renderSocials()}
                   <ToggleGroup
