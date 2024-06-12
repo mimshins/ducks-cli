@@ -1,0 +1,21 @@
+.root {
+  position: fixed;
+  inset: 0;
+
+  z-index: var(--z-2);
+
+  background-color: var(--color-neutral-background-overlay);
+  backdrop-filter: saturate(180%) blur(4px);
+
+  visibility: hidden;
+  opacity: 0;
+
+  transition:
+    opacity 160ms ease-in-out,
+    visibility 160ms ease-in-out;
+}
+
+.root.root--visible {
+  visibility: visible;
+  opacity: 1;
+}
