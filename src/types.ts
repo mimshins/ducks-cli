@@ -5,3 +5,11 @@ export type Social = {
   url: string;
   type: SocialType;
 };
+
+export type TOCTreeNode = {
+  title: string;
+  reference: string;
+  children?: TOCTreeNode[];
+};
+
+export type TOCTree = TOCTreeNode[];

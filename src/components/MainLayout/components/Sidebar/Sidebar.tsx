@@ -1,6 +1,7 @@
-import { AppSidebarTree, type SidebarTreeNode } from "@/configs";
+import { DucksAppConfig } from "@/configs";
 import { clss, isAbsoluteUrl } from "@/utils";
 import { Flex, Text } from "@dot-helix/ui";
+import type { SidebarTreeNode } from "@shared-types";
 import Link from "next/link";
 import classes from "./Sidebar.module.css";
 
@@ -66,7 +67,7 @@ const Sidebar = (props: Props) => {
         direction="column"
         aria-label="Main content navigation on the sidebar"
       >
-        {AppSidebarTree.map(renderNavNode)}
+        {DucksAppConfig.sidebar.map(renderNavNode)}
       </Flex.Container>
     </aside>
   );

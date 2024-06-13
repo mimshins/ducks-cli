@@ -1,4 +1,4 @@
-import { type TOCTree, type TOCTreeNode } from "@/configs";
+import { type TOCTree, type TOCTreeNode } from "@/types";
 import { clss } from "@/utils";
 import { Flex, Text } from "@dot-helix/ui";
 import Link from "next/link";
