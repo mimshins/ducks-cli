@@ -1,3 +1,17 @@
+export type RoutesMap = Record<string, string>;
+
+export type SidebarTreeNode =
+  | {
+      title: string;
+      children: SidebarTreeNode[];
+    }
+  | {
+      title: string;
+      routePath: string;
+    };
+
+export type SidebarTree = SidebarTreeNode[];
+
 export type DucksConfig = {
   /**
    * The name of the application.
@@ -9,6 +23,10 @@ export type DucksConfig = {
    * A string in which you can explain what the application does.
    */
   description: string;
+  /**
+   * The sidebar of the application.
+   */
+  sidebar: SidebarTree;
   /**
    * The social networks related to the application.
    */
