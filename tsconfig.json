@@ -25,20 +25,17 @@
     "noUncheckedIndexedAccess": true,
     "noEmit": true,
     "jsx": "preserve",
-    "plugins": [{ "name": "next" }],
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
       "@/*": ["./src/*"],
       "@public/*": ["./public/*"],
-      "@shared-types": ["./shared-types/index.ts"]
+      "@shared-types": ["./shared-types.ts"]
     }
   },
-  "include": [
-    "src",
-    "scripts",
-    "bin",
-    "shared-types",
-    ".next/types/**/*.ts",
-    "next-env.d.ts"
-  ],
+  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
