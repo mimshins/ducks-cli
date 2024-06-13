@@ -1,5 +1,10 @@
 {
   "routesMap": {
-    "/getting-started/installation": "path/to/markdown.md"
+    "/": "/Users/divar/ducks-cli/.mock/views/index.md",
+    "components/badge": "/Users/divar/ducks-cli/.mock/views/components/badge.md",
+    "components/breadcrumb": "/Users/divar/ducks-cli/.mock/views/components/breadcrumb.md",
+    "getting-started/installation": "/Users/divar/ducks-cli/.mock/views/getting-started/installation.md",
+    "getting-started/project-structure": "/Users/divar/ducks-cli/.mock/views/getting-started/project-structure.md",
+    "components/button": "/Users/divar/ducks-cli/.mock/views/components/button/index.md"
   }
 }

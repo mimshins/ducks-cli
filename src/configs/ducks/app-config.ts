@@ -26,11 +26,12 @@ const createSocials = (socialUrlMap: Record<string, string> = {}) => {
   return socials;
 };
 
-const { name, description, socials } = appConfigJson as DucksConfig;
+const { name, description, socials, sidebar } = appConfigJson as DucksConfig;
 
 const appConfig: AppConfig = {
   name,
   description,
+  sidebar,
   socials: createSocials(socials),
 };
 

@@ -1,5 +1,5 @@
+import type { RoutesMap } from "@shared-types";
 import routesMapJson from "./routes-map.json";
-import type { RoutesMap } from "./types";
 
 const routesMap: RoutesMap = routesMapJson.routesMap;
 
