@@ -135,6 +135,7 @@ Please follow the coding style of the project. We use `prettier` and `eslint`, s
   - 🔒 when dealing with security
   - ⬆️ when upgrading dependencies
   - ⬇️ when downgrading dependencies
+  - 📦 when adding new dependencies
 
 ## License
 
