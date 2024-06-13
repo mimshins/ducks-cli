@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@shared-types": ["../shared-types.ts"]
+    }
+  },
+  "include": ["./**/*.ts"]
+}
