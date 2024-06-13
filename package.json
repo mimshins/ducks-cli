@@ -30,7 +30,6 @@
   "scripts": {
     "dev": "next dev",
     "lint": "eslint \"**/*.{ts,tsx}\" --config .eslintrc && tsc --project tsconfig.json",
-    "ducks:serve": "serve",
     "ducks:build": "next build --no-lint",
     "build:pre": "rimraf dist",
     "build": "npm-run-all build:pre build:app build:cli",
@@ -44,10 +43,18 @@
     "@mdi/js": "^7.4.47",
     "@utilityjs/use-media-query": "^1.0.1",
     "@utilityjs/use-scroll-guard": "^1.0.0",
+    "hast-util-to-jsx-runtime": "^2.3.0",
+    "html-url-attributes": "^3.0.0",
+    "mdast-util-to-hast": "^13.2.0",
     "next": "^14.2.3",
     "react": "^18.3.1",
     "react-containerized-state": "^1.1.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.0",
+    "unified": "^11.0.4",
+    "unist-util-visit": "^5.0.0",
+    "vfile": "^6.0.1"
   },
   "devDependencies": {
     "@commander-js/extra-typings": "^12.1.0",
@@ -81,7 +88,6 @@
     "prompts": "^2.4.2",
     "rimraf": "^5.0.7",
     "semver": "^7.6.2",
-    "serve": "^14.2.3",
     "tsx": "^4.14.0",
     "typescript": "^5.4.5",
     "update-check": "^1.5.4",
