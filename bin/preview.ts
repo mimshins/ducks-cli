@@ -29,7 +29,24 @@ const preview = async (cwd = Process.cwd()) => {
     Process.exit(1);
   }
 
-  spawnSync(packageManager, ["ducks:serve", "--", outFile], {
+  let args: string[] = [];
+  let cmd: string;
+
+  if (packageManager === "yarn") {
+    cmd = "yarn";
+    args = ["dlx", "serve", outFile];
+  } else if (packageManager === "pnpm") {
+    cmd = "pnpm";
+    args = ["dlx", "serve", outFile];
+  } else if (packageManager === "npm") {
+    cmd = "npx";
+    args = ["serve", outFile];
+  } else {
+    cmd = "bunx";
+    args = ["serve", outFile];
+  }
+
+  spawnSync(cmd, args, {
     stdio: "inherit",
     cwd: root,
   });
